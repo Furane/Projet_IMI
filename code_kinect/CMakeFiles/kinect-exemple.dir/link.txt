@@ -1,1 +1,0 @@
-/usr/bin/c++   -g    CMakeFiles/kinect-exemple.dir/src/main.cpp.o  -o kinect-exemple  -L/home/francois/kinect/NiTE-Linux-x64-2.2/Redist  -L/home/francois/kinect/OpenNI-Linux-x64-2.2/Redist -rdynamic -lOpenNI2 -lNiTE2 -Wl,-rpath,/home/francois/kinect/NiTE-Linux-x64-2.2/Redist:/home/francois/kinect/OpenNI-Linux-x64-2.2/Redist 
