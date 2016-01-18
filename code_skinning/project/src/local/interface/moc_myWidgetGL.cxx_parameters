@@ -1,0 +1,12 @@
+-I/usr/local/Trolltech/Qt-4.8.5/include
+-I/usr/local/Trolltech/Qt-4.8.5/include/QtGui
+-I/usr/local/Trolltech/Qt-4.8.5/include/QtCore
+-I/home/francois/Bureau/Projet_IMI/code_skinning/project
+-I/home/francois/kinect/NiTE-Linux-x64-2.2/Include
+-I/home/francois/kinect/OpenNI-Linux-x64-2.2/Include
+-DQT_NO_DEBUG
+-DQT_GUI_LIB
+-DQT_CORE_LIB
+-o
+/home/francois/Bureau/Projet_IMI/code_skinning/project/src/local/interface/moc_myWidgetGL.cxx
+/home/francois/Bureau/Projet_IMI/code_skinning/project/src/local/interface/myWidgetGL.hpp

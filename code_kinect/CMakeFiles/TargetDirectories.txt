@@ -1,0 +1,1 @@
+/home/francois/Bureau/Projet_IMI/code_kinect/CMakeFiles/kinect-exemple.dir

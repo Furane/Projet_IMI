@@ -1,0 +1,5 @@
+# Skeleton of Scotty by Kamal Berrahal; Format : parent_id joint.position joint.orientation
+-1 0.438 1.311 0.0  0.000000 0.000000 0.000000 1.000000 //epaule
+0  0.007 -0.74 0.0  0.000000 0.000000 0.000000 1.000000 //coude
+1  0.0 -0.65 0.0  0.000000 0.000000 0.000000 1.000000 //poignet
+2  0.0 -0.605 0.0  0.000000 0.000000 0.000000 1.000000 //bout de main

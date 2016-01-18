@@ -1,0 +1,21 @@
+# Kinect Scotty Skeleton by Berrahal Kamal, Gavrel François; Format : parent_id joint.position joint.orientation
+-1  0.0    0.0   0.0   0.0 0.0 0.0 1.0 //centre hanche
+ 0  0.0    0.7   0.0   0.0 0.0 0.0 1.0 //torse
+ 0 -0.167  0.037 0.0   0.0 0.0 0.0 1.0 //hanche droite
+ 0  0.167  0.037 0.0   0.0 0.0 0.0 1.0 //hauche gauche
+ 1  0.0    0.768 0.0   0.0 0.0 0.0 1.0 //cou
+ 2 -0.002 -0.964 0.0   0.0 0.0 0.0 1.0 //genou droit
+ 3  0.002 -0.964 0.0   0.0 0.0 0.0 1.0 //genou gauche
+ 4 -0.438 -0.157 0.0   0.0 0.0 0.0 1.0 //épaule droite
+ 4  0.0    0.659 0.0   0.0 0.0 0.0 1.0 //tete
+ 4  0.438 -0.157 0.0   0.0 0.0 0.0 1.0 //épaule gauche
+ 5  0.0   -0.88  0.0   0.0 0.0 0.0 1.0 //cheville droite
+ 6  0.0   -0.88  0.0   0.0 0.0 0.0 1.0 //cheville gauche
+ 7 -0.74   0.007 0.0   0.0 0.0 0.0 1.0 //coude droit 
+ 9  0.74   0.007 0.0   0.0 0.0 0.0 1.0 //coude gauche 
+10  0.0   -0.146 0.338 0.0 0.0 0.0 1.0 //pied droit
+11  0.0   -0.146 0.338 0.0 0.0 0.0 1.0 //pied gauche
+12 -0.65   0.0   0.0   0.0 0.0 0.0 1.0 //poignet droit 
+13  0.65   0.0   0.0   0.0 0.0 0.0 1.0 //poignet gauche 
+16 -0.4    0.0   0.0   0.0 0.0 0.0 1.0 //main droite   
+17  0.4    0.0   0.0   0.0 0.0 0.0 1.0 //main gauche   
