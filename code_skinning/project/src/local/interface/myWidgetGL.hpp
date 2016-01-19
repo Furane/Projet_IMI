@@ -31,6 +31,10 @@ public:
     void change_draw_state();
     /** Set the wireframe on/off */
     void wireframe(bool est_actif);
+    /** Set the skeleton on/off */
+    void skeleton(bool est_actif);
+    /** Set the mesh on/off */
+    void mesh(bool est_actif);
     /** Get the current cameras values */
     cpe::camera_matrices const& camera() const;
 

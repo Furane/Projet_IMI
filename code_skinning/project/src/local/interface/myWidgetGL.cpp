@@ -188,6 +188,18 @@ void myWidgetGL::wireframe(bool const is_wireframe)
     updateGL();
 }
 
+void myWidgetGL::skeleton(bool const is_skeleton)
+{
+    scene_3d.set_draw_skeleton(is_skeleton);
+    updateGL();
+}
+
+void myWidgetGL::mesh(bool const is_mesh)
+{
+    scene_3d.set_draw_mesh(is_mesh);
+    updateGL();
+}
+
 
 void myWidgetGL::resizeGL(int const width,int const height)
 {

@@ -33,6 +33,8 @@ myWindow::myWindow(QWidget *parent)
     connect(ui->quit,SIGNAL(clicked()),this,SLOT(action_quit()));
     connect(ui->draw,SIGNAL(clicked()),this,SLOT(action_draw()));
     connect(ui->wireframe,SIGNAL(clicked()),this,SLOT(action_wireframe()));
+    connect(ui->skeleton,SIGNAL(clicked()),this,SLOT(action_skeleton()));
+    connect(ui->mesh,SIGNAL(clicked()),this,SLOT(action_mesh()));
 
 }
 
@@ -53,5 +55,17 @@ void myWindow::action_wireframe()
 {
     bool const state_wireframe=ui->wireframe->isChecked();
     glWidget->wireframe(state_wireframe);
+}
+
+void myWindow::action_skeleton()
+{
+    bool const state_skeleton=ui->skeleton->isChecked();
+    glWidget->skeleton(state_skeleton);
+}
+
+void myWindow::action_mesh()
+{
+    bool const state_mesh=ui->mesh->isChecked();
+    glWidget->mesh(state_mesh);
 }
 

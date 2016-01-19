@@ -36,6 +36,10 @@ private slots:
     void action_draw();
     /** Set the Wireframe mode for the meshes */
     void action_wireframe();
+    /** Display or not the skeleton */
+    void action_skeleton();
+    /** Display or not the mesh */
+    void action_mesh();
 
 private:
 

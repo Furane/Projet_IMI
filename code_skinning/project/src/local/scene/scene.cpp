@@ -224,7 +224,7 @@ void updateUserState(const nite::UserData& user, unsigned long long ts)
 
 void scene::get_kinect_skeleton()
 {
-    float scale = 250.0f;
+    float scale = 300.0f;//250.0f
 
     niteRc = userTracker.readFrame(&userTrackerFrame);
     if (niteRc != nite::STATUS_OK)
@@ -496,7 +496,9 @@ void scene::draw_scene()
 
     get_kinect_skeleton();
     std::vector<vec3> const sk_kinect_bones = extract_bones(sk_kinect,sk_scotty_parent_id);
-    draw_skeleton(sk_kinect_bones);
+
+    if(draw_sk)
+        draw_skeleton(sk_kinect_bones);
 
     skeleton_geometry const sk_scotty_inverse_bind_pose = inversed(local_to_global(sk_scotty_bind_pose,sk_scotty_parent_id));//local_to_global(sk_scotty_bind_pose,sk_scotty_parent_id)
     skeleton_geometry const sk_scotty_binded = multiply(sk_kinect,sk_scotty_inverse_bind_pose);
@@ -504,7 +506,9 @@ void scene::draw_scene()
     mesh_scotty.fill_normal();
     mesh_scotty_opengl.update_vbo_vertex(mesh_scotty);
     mesh_scotty_opengl.update_vbo_normal(mesh_scotty);
-    mesh_scotty_opengl.draw();
+
+    if(draw_mesh)
+        mesh_scotty_opengl.draw();
 }
 
 
@@ -576,6 +580,16 @@ GLuint scene::load_texture_file(std::string const& filename)
 void scene::set_widget(myWidgetGL* widget_param)
 {
     pwidget=widget_param;
+}
+
+void scene::set_draw_skeleton(bool const is_skeleton)
+{
+    draw_sk=is_skeleton;
+}
+
+void scene::set_draw_mesh(bool const is_mesh)
+{
+    draw_mesh=is_mesh;
 }
 
 

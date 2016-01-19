@@ -49,6 +49,9 @@ public:
     /**  Method called to get the skeleton returned by the kinect */
     void get_kinect_skeleton();
 
+    void set_draw_skeleton(bool is_skeleton);
+    void set_draw_mesh(bool is_mesh);
+
 private:
 
     /** Draw a set of line representing a skeleton */
@@ -69,6 +72,7 @@ private:
     /** Ground mesh for OpenGL drawing */
     cpe::mesh_opengl mesh_ground_opengl;
 
+
     /** Mesh of the skinned cylinder */
     cpe::mesh_skinned mesh_cylinder;
     /** Mesh of the skinned cylinder for OpenGL drawing */
@@ -80,6 +84,7 @@ private:
     cpe::skeleton_parent_id sk_cylinder_parent_id;
     /** Animation of the skeleton for the cylinder */
     cpe::skeleton_animation sk_cylinder_animation;
+
 
     /** Mesh of the skinned cat */
     cpe::mesh_skinned mesh_cat;
@@ -94,6 +99,7 @@ private:
     cpe::skeleton_parent_id sk_cat_parent_id;
     /** Animation of the skeleton for the cat */
     cpe::skeleton_animation sk_cat_animation;
+
 
     /** Mesh of the skinned scotty */
     cpe::mesh_skinned mesh_scotty;
@@ -134,6 +140,10 @@ private:
     nite::UserTracker userTracker;
     nite::Status niteRc;
     nite::UserTrackerFrameRef userTrackerFrame;
+
+    /** variable to draw or not the skeleton and the mesh */
+    bool draw_sk;
+    bool draw_mesh;
 
 };
 
