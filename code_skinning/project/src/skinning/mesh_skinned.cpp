@@ -73,6 +73,8 @@ void mesh_skinned::load(std::string const& filename)
     vertex_weight_parameter temp_skinning;
     int const N_bone = temp_skinning.size();
 
+    vec3 color_bone(0,0,0);
+
     for(int k_bone=0 ; k_bone<N_bone ; ++k_bone)
     {
         init_skinning[k_bone].joint_id = 0;
@@ -101,6 +103,7 @@ void mesh_skinned::load(std::string const& filename)
                     tokens >> skeleton_part;
                     if(skeleton_part == "ventre")
                     {
+                        color_bone = vec3(1.0f,1.0f,0.0f);
                         temp_skinning[0].joint_id = 0;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -112,6 +115,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "buste")
                     {
+                        color_bone = vec3(1.0f,0.75f,0.0f);
                         temp_skinning[0].joint_id = 1;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -123,6 +127,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "cuisse_r")
                     {
+                        color_bone = vec3(0,0,1);
                         temp_skinning[0].joint_id = 2;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -134,6 +139,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "cuisse_l")
                     {
+                        color_bone = vec3(0,0,1);
                         temp_skinning[0].joint_id = 3;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -145,6 +151,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "tete")
                     {
+                        color_bone = vec3(1.0f,0.75f,0.75f);
                         temp_skinning[0].joint_id = 4;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -156,6 +163,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "bas_jambe_r")
                     {
+                        color_bone = vec3(0,1,1);
                         temp_skinning[0].joint_id = 5;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -167,6 +175,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "bas_jambe_l")
                     {
+                        color_bone = vec3(0,1,1);
                         temp_skinning[0].joint_id = 6;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -178,6 +187,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "bras_r")
                     {
+                        color_bone = vec3(0.5f,0.5f,0.5f);
                         temp_skinning[0].joint_id = 7;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -189,6 +199,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "bras_l")
                     {
+                        color_bone = vec3(0,1,0);
                         temp_skinning[0].joint_id = 9;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -200,6 +211,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "main_r")
                     {
+                        color_bone = vec3(0.75f,0.75f,0.75f);
                         temp_skinning[0].joint_id = 12;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -211,6 +223,7 @@ void mesh_skinned::load(std::string const& filename)
                     }
                     if(skeleton_part == "main_l")
                     {
+                        color_bone = vec3(0.85f,0.85f,0.85f);
                         temp_skinning[0].joint_id = 13;
                         temp_skinning[0].weight = 1;
                         //on met les autres bones a 0
@@ -230,6 +243,7 @@ void mesh_skinned::load(std::string const& filename)
                   tokens >> vertex.z();
 
                   add_vertex(vertex);
+                  add_color(color_bone);
                   skinning_info.push_back(init_skinning);//on ajoute le poids initialise à 0
                 }
 
@@ -284,6 +298,9 @@ void mesh_skinned::load(std::string const& filename)
                   skinning_info[u1] = temp_skinning;
                   skinning_info[u2] = temp_skinning;
 
+                  color(u0)= color_bone;
+                  color(u1)= color_bone;
+                  color(u2)= color_bone;
                 }
             }
 

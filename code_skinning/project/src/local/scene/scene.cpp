@@ -249,80 +249,80 @@ void scene::get_kinect_skeleton()
 
             const nite::SkeletonJoint& head = user.getSkeleton().getJoint(nite::JOINT_HEAD);
             //if (head.getPositionConfidence() > .5)
-                sk_head = skeleton_joint({head.getPosition().x/scale, head.getPosition().y/scale, 0},
+                sk_head = skeleton_joint({head.getPosition().x/scale, head.getPosition().y/scale, -head.getPosition().z/scale},
                 {head.getOrientation().x, head.getOrientation().y, head.getOrientation().z, head.getOrientation().w});//head.getPosition().z
 
             const nite::SkeletonJoint& neck = user.getSkeleton().getJoint(nite::JOINT_NECK);
             //if (neck.getPositionConfidence() > .5)
-                sk_neck = skeleton_joint({neck.getPosition().x/scale, neck.getPosition().y/scale, 0},
+                sk_neck = skeleton_joint({neck.getPosition().x/scale, neck.getPosition().y/scale, -neck.getPosition().z/scale},
                 {neck.getOrientation().x, neck.getOrientation().y, neck.getOrientation().z, neck.getOrientation().w});//neck.getPosition().z
             const nite::SkeletonJoint& left_shoulder = user.getSkeleton().getJoint(nite::JOINT_LEFT_SHOULDER);
             //if (left_shoulder.getPositionConfidence() > .5)
-                sk_left_shoulder = skeleton_joint({left_shoulder.getPosition().x/scale, left_shoulder.getPosition().y/scale, 0},
+                sk_left_shoulder = skeleton_joint({left_shoulder.getPosition().x/scale, left_shoulder.getPosition().y/scale, -left_shoulder.getPosition().z/scale},
                 {left_shoulder.getOrientation().x, left_shoulder.getOrientation().y, left_shoulder.getOrientation().z, left_shoulder.getOrientation().w});//left_shoulder.getPosition().z
 
             const nite::SkeletonJoint& right_shoulder = user.getSkeleton().getJoint(nite::JOINT_RIGHT_SHOULDER);
             //if (right_shoulder.getPositionConfidence() > .5)
-                sk_right_shoulder = skeleton_joint({right_shoulder.getPosition().x/scale, right_shoulder.getPosition().y/scale, 0},
+                sk_right_shoulder = skeleton_joint({right_shoulder.getPosition().x/scale, right_shoulder.getPosition().y/scale, -right_shoulder.getPosition().z/scale},
                 {right_shoulder.getOrientation().x, right_shoulder.getOrientation().y, right_shoulder.getOrientation().z, right_shoulder.getOrientation().w});//right_shoulder.getPosition().z
 
             const nite::SkeletonJoint& left_elbow = user.getSkeleton().getJoint(nite::JOINT_LEFT_ELBOW);
             //if (left_elbow.getPositionConfidence() > .5)
-                sk_left_elbow = skeleton_joint({left_elbow.getPosition().x/scale, left_elbow.getPosition().y/scale, 0},
+                sk_left_elbow = skeleton_joint({left_elbow.getPosition().x/scale, left_elbow.getPosition().y/scale, -left_elbow.getPosition().z/scale},
                 {left_elbow.getOrientation().x, left_elbow.getOrientation().y, left_elbow.getOrientation().z, left_elbow.getOrientation().w});//left_elbow.getPosition().z
 
             const nite::SkeletonJoint& right_elbow = user.getSkeleton().getJoint(nite::JOINT_RIGHT_ELBOW);
             //if (right_elbow.getPositionConfidence() > .5)
-                sk_right_elbow = skeleton_joint({right_elbow.getPosition().x/scale, right_elbow.getPosition().y/scale, 0},
+                sk_right_elbow = skeleton_joint({right_elbow.getPosition().x/scale, right_elbow.getPosition().y/scale, -right_elbow.getPosition().z/scale},
                 {right_elbow.getOrientation().x, right_elbow.getOrientation().y, right_elbow.getOrientation().z, right_elbow.getOrientation().w});//right_elbow.getPosition().z
 
             const nite::SkeletonJoint& left_hand = user.getSkeleton().getJoint(nite::JOINT_LEFT_HAND);
             //if (left_hand.getPositionConfidence() > .5)
-                sk_left_hand = skeleton_joint({left_hand.getPosition().x/scale, left_hand.getPosition().y/scale, 0},
+                sk_left_hand = skeleton_joint({left_hand.getPosition().x/scale, left_hand.getPosition().y/scale, -left_hand.getPosition().z/scale},
                 {left_hand.getOrientation().x, left_hand.getOrientation().y, left_hand.getOrientation().z, left_hand.getOrientation().w});//left_hand.getPosition().z
 
             const nite::SkeletonJoint& right_hand = user.getSkeleton().getJoint(nite::JOINT_RIGHT_HAND);
             //if (right_hand.getPositionConfidence() > .5)
-                sk_right_hand = skeleton_joint({right_hand.getPosition().x/scale, right_hand.getPosition().y/scale, 0},
+                sk_right_hand = skeleton_joint({right_hand.getPosition().x/scale, right_hand.getPosition().y/scale, -right_hand.getPosition().z/scale},
                 {right_hand.getOrientation().x, right_hand.getOrientation().y, right_hand.getOrientation().z, right_hand.getOrientation().w});//right_hand.getPosition().z
 
             const nite::SkeletonJoint& torso = user.getSkeleton().getJoint(nite::JOINT_TORSO);
             //if (torso.getPositionConfidence() > .5)
-                sk_torso = skeleton_joint({torso.getPosition().x/scale, torso.getPosition().y/scale, 0},
+                sk_torso = skeleton_joint({torso.getPosition().x/scale, torso.getPosition().y/scale, -torso.getPosition().z/scale},
                 {torso.getOrientation().x, torso.getOrientation().y, torso.getOrientation().z, torso.getOrientation().w});//torso.getPosition().z
 
             const nite::SkeletonJoint& left_hip = user.getSkeleton().getJoint(nite::JOINT_LEFT_HIP);
             //if (left_hip.getPositionConfidence() > .5)
-                sk_left_hip = skeleton_joint({left_hip.getPosition().x/scale, left_hip.getPosition().y/scale, 0},
+                sk_left_hip = skeleton_joint({left_hip.getPosition().x/scale, left_hip.getPosition().y/scale, -left_hip.getPosition().z/scale},
                 {left_hip.getOrientation().x, left_hip.getOrientation().y, left_hip.getOrientation().z, left_hip.getOrientation().w});//left_hip.getPosition().z
 
             const nite::SkeletonJoint& right_hip = user.getSkeleton().getJoint(nite::JOINT_RIGHT_HIP);
             //if (right_hip.getPositionConfidence() > .5)
-                sk_right_hip = skeleton_joint({right_hip.getPosition().x/scale, right_hip.getPosition().y/scale, 0},
+                sk_right_hip = skeleton_joint({right_hip.getPosition().x/scale, right_hip.getPosition().y/scale, -right_hip.getPosition().z/scale},
                 {right_hip.getOrientation().x, right_hip.getOrientation().y, right_hip.getOrientation().z, right_hip.getOrientation().w});//right_hip.getPosition().z
 
             const nite::SkeletonJoint& left_knee = user.getSkeleton().getJoint(nite::JOINT_LEFT_KNEE);
             //if (left_knee.getPositionConfidence() > .5)
-                sk_left_knee = skeleton_joint({left_knee.getPosition().x/scale, left_knee.getPosition().y/scale, 0},
+                sk_left_knee = skeleton_joint({left_knee.getPosition().x/scale, left_knee.getPosition().y/scale, -left_knee.getPosition().z/scale},
                 {left_knee.getOrientation().x, left_knee.getOrientation().y, left_knee.getOrientation().z, left_knee.getOrientation().w});//left_knee.getPosition().z
 
             const nite::SkeletonJoint& right_knee = user.getSkeleton().getJoint(nite::JOINT_RIGHT_KNEE);
             //if (right_knee.getPositionConfidence() > .5)
-                sk_right_knee = skeleton_joint({right_knee.getPosition().x/scale, right_knee.getPosition().y/scale, 0},
+                sk_right_knee = skeleton_joint({right_knee.getPosition().x/scale, right_knee.getPosition().y/scale, -right_knee.getPosition().z/scale},
                 {right_knee.getOrientation().x, right_knee.getOrientation().y, right_knee.getOrientation().z, right_knee.getOrientation().w});//right_knee.getPosition().z
 
             const nite::SkeletonJoint& left_foot = user.getSkeleton().getJoint(nite::JOINT_LEFT_FOOT);
             //if (left_foot.getPositionConfidence() > .5)
-                sk_left_foot = skeleton_joint({left_foot.getPosition().x/scale, left_foot.getPosition().y/scale, 0},
+                sk_left_foot = skeleton_joint({left_foot.getPosition().x/scale, left_foot.getPosition().y/scale, -left_foot.getPosition().z/scale},
                 {left_foot.getOrientation().x, left_foot.getOrientation().y, left_foot.getOrientation().z, left_foot.getOrientation().w});//left_foot.getPosition().z
 
             const nite::SkeletonJoint& right_foot = user.getSkeleton().getJoint(nite::JOINT_RIGHT_FOOT);
             //if (right_foot.getPositionConfidence() > .5)
-                sk_right_foot = skeleton_joint({right_foot.getPosition().x/scale, right_foot.getPosition().y/scale, 0},
+                sk_right_foot = skeleton_joint({right_foot.getPosition().x/scale, right_foot.getPosition().y/scale, -right_foot.getPosition().z/scale},
                 {right_foot.getOrientation().x, right_foot.getOrientation().y, right_foot.getOrientation().z, right_foot.getOrientation().w});//right_foot.getPosition().z
 
             sk_center_hip = skeleton_joint((sk_left_hip.position+sk_right_hip.position)/2.0f,(sk_left_hip.orientation+sk_right_hip.orientation)/2.0f);
-            sk_center_hip.position.z()=0;
+            //sk_center_hip.position.z()=0;
 
             sk_kinect[0]= sk_center_hip;
             sk_kinect[1]= sk_torso;
@@ -387,16 +387,16 @@ void scene::load_scene()
     /*mesh_cat.load("data/cat.obj");
     texture_cat=load_texture_file("data/cat.png");
     mesh_cat.fill_empty_field_by_default();
-    mesh_cat_opengl.fill_vbo(mesh_cat);
+    mesh_cat_opengl.fill_vbo(mesh_cat);*/
 
-    sk_cat_bind_pose.load("data/cat_bind_pose.skeleton");
-    sk_cat_parent_id.load("data/cat_bind_pose.skeleton");
-    sk_cat_animation.load("data/cat.animations",sk_cat_parent_id.size());*/
+    /*sk_cat_bind_pose.load("data/cat_bind_pose.skeleton");
+    sk_cat_parent_id.load("data/cat_bind_pose.skeleton");*/
+    //sk_cat_animation.load("data/cat.animations",sk_cat_parent_id.size());
 
     //*****************************************//
     // Load Rigged Stick Figure
     //*****************************************//
-    mesh_scotty.load("data/blender_mesh/Scotty_with_skinning.obj");//StickFigurea.obj  Scotty.obj Scotty_part.obj
+    mesh_scotty.load("data/blender_mesh/Scotty_skinning_heavy.obj");//StickFigurea.obj  Scotty.obj Scotty_part.obj
     //texture_stick=load_texture_file("data/StickFigurea/cat.png");
     mesh_scotty.fill_empty_field_by_default();
     mesh_scotty_opengl.fill_vbo(mesh_scotty);
@@ -468,7 +468,7 @@ void scene::draw_scene()
     mesh_cylinder_opengl.update_vbo_normal(mesh_cylinder);
     mesh_cylinder_opengl.draw();
 
-    skeleton_geometry const sk_cat_global = local_to_global(sk_cat_animation(cat_pose,cat_alpha),sk_cat_parent_id);
+    skeleton_geometry const sk_cat_global = local_to_global(sk_cat_animation(cat_pose,cat_alpha),sk_cat_parent_id);//sk_cat_animation(cat_pose,cat_alpha)
     std::vector<vec3> const sk_cat_bones = extract_bones(sk_cat_global,sk_cat_parent_id);//sk_cat_global
     draw_skeleton(sk_cat_bones);
 
@@ -498,7 +498,7 @@ void scene::draw_scene()
     std::vector<vec3> const sk_kinect_bones = extract_bones(sk_kinect,sk_scotty_parent_id);
     draw_skeleton(sk_kinect_bones);
 
-    skeleton_geometry const sk_scotty_inverse_bind_pose = inversed(local_to_global(sk_scotty_bind_pose,sk_scotty_parent_id));//sk_kinect_bind_pose
+    skeleton_geometry const sk_scotty_inverse_bind_pose = inversed(local_to_global(sk_scotty_bind_pose,sk_scotty_parent_id));//local_to_global(sk_scotty_bind_pose,sk_scotty_parent_id)
     skeleton_geometry const sk_scotty_binded = multiply(sk_kinect,sk_scotty_inverse_bind_pose);
     mesh_scotty.apply_skinning(sk_scotty_binded);
     mesh_scotty.fill_normal();
